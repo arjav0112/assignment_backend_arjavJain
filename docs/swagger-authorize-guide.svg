@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Swagger Authorize Button Guide</title>
+  <desc id="desc">Illustration of the Swagger UI showing the Authorize button in the top-right corner.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #d7dee7; stroke-width: 2; }
+      .title { fill: #24324b; font: 700 30px Segoe UI, Arial, sans-serif; }
+      .sub { fill: #41526f; font: 400 18px Segoe UI, Arial, sans-serif; }
+      .section { fill: #f3fbf8; stroke: #94e2c3; stroke-width: 2; }
+      .sectionText { fill: #1f7a5f; font: 700 18px Consolas, monospace; }
+      .authBtn { fill: #ffffff; stroke: #4fd1a5; stroke-width: 3; }
+      .authText { fill: #34b27f; font: 700 22px Segoe UI, Arial, sans-serif; }
+      .callout { fill: none; stroke: #ef4444; stroke-width: 3; }
+      .calloutText { fill: #b91c1c; font: 700 22px Segoe UI, Arial, sans-serif; }
+      .hint { fill: #334155; font: 600 20px Segoe UI, Arial, sans-serif; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="420"/>
+  <rect class="panel" x="18" y="18" width="1164" height="384" rx="10"/>
+
+  <text class="title" x="45" y="78">Finance Dashboard API</text>
+  <text class="sub" x="45" y="114">Role-based finance data management backend</text>
+
+  <rect class="section" x="40" y="180" width="650" height="50" rx="6"/>
+  <text class="sectionText" x="62" y="212">POST /auth/register</text>
+  <text class="sub" x="280" y="212">Register User</text>
+
+  <rect class="section" x="40" y="250" width="650" height="50" rx="6"/>
+  <text class="sectionText" x="62" y="282">POST /auth/login</text>
+  <text class="sub" x="255" y="282">Login</text>
+
+  <rect class="authBtn" x="1015" y="110" width="125" height="48" rx="6"/>
+  <text class="authText" x="1040" y="141">Authorize</text>
+  <circle cx="1122" cy="134" r="11" fill="#34b27f"/>
+  <rect x="1116" y="126" width="12" height="15" rx="2" fill="#ffffff"/>
+  <path d="M1119 126v-4a3 3 0 0 1 6 0v4" fill="none" stroke="#ffffff" stroke-width="2"/>
+
+  <ellipse class="callout" cx="1078" cy="134" rx="125" ry="72"/>
+  <path class="callout" d="M910 60 C 940 76, 970 92, 997 118" marker-end="url(#arrow)"/>
+  <text class="calloutText" x="745" y="58">Click this first</text>
+
+  <text class="hint" x="720" y="225">1. Login with email and password</text>
+  <text class="hint" x="720" y="260">2. Copy the access token</text>
+  <text class="hint" x="720" y="295">3. Click Authorize and paste</text>
+  <text class="hint" x="720" y="330">   Bearer &lt;access_token&gt;</text>
+</svg>
