@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" role="img" aria-labelledby="title desc">
+  <title id="title">Finance Dashboard Database Schema</title>
+  <desc id="desc">Schema visualization for alembic_version, financial_records, and users tables.</desc>
+  <defs>
+    <style>
+      .bg { fill: #171717; }
+      .grid { stroke: #232323; stroke-width: 1; }
+      .card { fill: #222222; stroke: #444444; stroke-width: 2; }
+      .header { fill: #121212; stroke: #444444; stroke-width: 2; }
+      .titleText { fill: #f5f5f5; font: 700 18px Segoe UI, Arial, sans-serif; }
+      .cell { fill: none; stroke: #3c3c3c; stroke-width: 1; }
+      .name { fill: #f1f1f1; font: 700 15px Segoe UI, Arial, sans-serif; }
+      .type { fill: #9b9b9b; font: 500 14px Consolas, monospace; }
+      .legendText { fill: #f5f5f5; font: 500 14px Segoe UI, Arial, sans-serif; }
+      .muted { fill: #c9c9c9; }
+      .relation { fill: none; stroke: #bbbbbb; stroke-width: 3; stroke-dasharray: 12 10; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="860"/>
+
+  <g opacity="0.45">
+    <path class="grid" d="M0 0H1280"/>
+    <path class="grid" d="M0 40H1280"/>
+    <path class="grid" d="M0 80H1280"/>
+    <path class="grid" d="M0 120H1280"/>
+    <path class="grid" d="M0 160H1280"/>
+    <path class="grid" d="M0 200H1280"/>
+    <path class="grid" d="M0 240H1280"/>
+    <path class="grid" d="M0 280H1280"/>
+    <path class="grid" d="M0 320H1280"/>
+    <path class="grid" d="M0 360H1280"/>
+    <path class="grid" d="M0 400H1280"/>
+    <path class="grid" d="M0 440H1280"/>
+    <path class="grid" d="M0 480H1280"/>
+    <path class="grid" d="M0 520H1280"/>
+    <path class="grid" d="M0 560H1280"/>
+    <path class="grid" d="M0 600H1280"/>
+    <path class="grid" d="M0 640H1280"/>
+    <path class="grid" d="M0 680H1280"/>
+    <path class="grid" d="M0 720H1280"/>
+    <path class="grid" d="M0 760H1280"/>
+    <path class="grid" d="M0 800H1280"/>
+    <path class="grid" d="M0 840H1280"/>
+    <path class="grid" d="M0 0V860"/>
+    <path class="grid" d="M40 0V860"/>
+    <path class="grid" d="M80 0V860"/>
+    <path class="grid" d="M120 0V860"/>
+    <path class="grid" d="M160 0V860"/>
+    <path class="grid" d="M200 0V860"/>
+    <path class="grid" d="M240 0V860"/>
+    <path class="grid" d="M280 0V860"/>
+    <path class="grid" d="M320 0V860"/>
+    <path class="grid" d="M360 0V860"/>
+    <path class="grid" d="M400 0V860"/>
+    <path class="grid" d="M440 0V860"/>
+    <path class="grid" d="M480 0V860"/>
+    <path class="grid" d="M520 0V860"/>
+    <path class="grid" d="M560 0V860"/>
+    <path class="grid" d="M600 0V860"/>
+    <path class="grid" d="M640 0V860"/>
+    <path class="grid" d="M680 0V860"/>
+    <path class="grid" d="M720 0V860"/>
+    <path class="grid" d="M760 0V860"/>
+    <path class="grid" d="M800 0V860"/>
+    <path class="grid" d="M840 0V860"/>
+    <path class="grid" d="M880 0V860"/>
+    <path class="grid" d="M920 0V860"/>
+    <path class="grid" d="M960 0V860"/>
+    <path class="grid" d="M1000 0V860"/>
+    <path class="grid" d="M1040 0V860"/>
+    <path class="grid" d="M1080 0V860"/>
+    <path class="grid" d="M1120 0V860"/>
+    <path class="grid" d="M1160 0V860"/>
+    <path class="grid" d="M1200 0V860"/>
+    <path class="grid" d="M1240 0V860"/>
+  </g>
+
+  <g transform="translate(310 65)">
+    <rect class="card" width="380" height="108" rx="10"/>
+    <rect class="header" width="380" height="58" rx="10"/>
+    <text class="titleText" x="58" y="36">alembic_version</text>
+    <rect class="cell" x="0" y="58" width="380" height="50"/>
+    <text class="name" x="58" y="90">version_num</text>
+    <text class="type" x="305" y="90">varchar</text>
+    <circle cx="28" cy="82" r="5" fill="none" stroke="#cfcfcf" stroke-width="1.5"/>
+    <rect x="44" y="75" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 80.5)"/>
+    <rect x="22" y="12" width="22" height="22" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5"/>
+    <path d="M33 12V34M22 23H44" stroke="#cfcfcf" stroke-width="1.3"/>
+    <circle cx="352" cy="23" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="29" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="35" r="2.6" fill="#f3f3f3"/>
+  </g>
+
+  <g transform="translate(310 260)">
+    <rect class="card" width="380" height="540" rx="10"/>
+    <rect class="header" width="380" height="58" rx="10"/>
+    <text class="titleText" x="58" y="36">financial_records</text>
+    <rect x="22" y="12" width="22" height="22" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5"/>
+    <path d="M33 12V34M22 23H44" stroke="#cfcfcf" stroke-width="1.3"/>
+    <circle cx="352" cy="23" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="29" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="35" r="2.6" fill="#f3f3f3"/>
+
+    <g>
+      <rect class="cell" x="0" y="58" width="380" height="48"/>
+      <text class="name" x="58" y="88">id</text><text class="type" x="332" y="88">int4</text>
+      <circle cx="28" cy="81" r="5" fill="none" stroke="#cfcfcf" stroke-width="1.5"/><rect x="44" y="75" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 80.5)"/>
+      <rect class="cell" x="0" y="106" width="380" height="48"/>
+      <text class="name" x="58" y="136">amount</text><text class="type" x="302" y="136">float8</text>
+      <rect x="44" y="123" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 128.5)"/>
+      <rect class="cell" x="0" y="154" width="380" height="48"/>
+      <text class="name" x="58" y="184">type</text><text class="type" x="290" y="184">varchar</text>
+      <rect x="44" y="171" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 176.5)"/>
+      <rect class="cell" x="0" y="202" width="380" height="48"/>
+      <text class="name" x="58" y="232">category</text><text class="type" x="290" y="232">varchar</text>
+      <rect x="44" y="219" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 224.5)"/>
+      <rect class="cell" x="0" y="250" width="380" height="48"/>
+      <text class="name" x="58" y="280">date</text><text class="type" x="320" y="280">date</text>
+      <rect x="44" y="267" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 272.5)"/>
+      <rect class="cell" x="0" y="298" width="380" height="48"/>
+      <text class="name" x="58" y="328">notes</text><text class="type" x="290" y="328">varchar</text>
+      <rect x="44" y="315" width="11" height="11" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5" transform="rotate(45 49.5 320.5)"/>
+      <rect class="cell" x="0" y="346" width="380" height="48"/>
+      <text class="name" x="58" y="376">created_by</text><text class="type" x="320" y="376">int4</text>
+      <rect x="44" y="363" width="11" height="11" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5" transform="rotate(45 49.5 368.5)"/>
+      <rect class="cell" x="0" y="394" width="380" height="48"/>
+      <text class="name" x="58" y="424">is_deleted</text><text class="type" x="316" y="424">bool</text>
+      <rect x="44" y="411" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 416.5)"/>
+      <rect class="cell" x="0" y="442" width="380" height="48"/>
+      <text class="name" x="58" y="472">created_at</text><text class="type" x="274" y="472">timestamp</text>
+      <rect x="44" y="459" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 464.5)"/>
+      <rect class="cell" x="0" y="490" width="380" height="48"/>
+      <text class="name" x="58" y="520">updated_at</text><text class="type" x="274" y="520">timestamp</text>
+      <rect x="44" y="507" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 512.5)"/>
+    </g>
+  </g>
+
+  <g transform="translate(810 290)">
+    <rect class="card" width="380" height="410" rx="10"/>
+    <rect class="header" width="380" height="58" rx="10"/>
+    <text class="titleText" x="58" y="36">users</text>
+    <rect x="22" y="12" width="22" height="22" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5"/>
+    <path d="M33 12V34M22 23H44" stroke="#cfcfcf" stroke-width="1.3"/>
+    <circle cx="352" cy="23" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="29" r="2.6" fill="#f3f3f3"/>
+    <circle cx="352" cy="35" r="2.6" fill="#f3f3f3"/>
+
+    <g>
+      <rect class="cell" x="0" y="58" width="380" height="48"/>
+      <text class="name" x="58" y="88">id</text><text class="type" x="332" y="88">int4</text>
+      <circle cx="28" cy="81" r="5" fill="none" stroke="#cfcfcf" stroke-width="1.5"/><rect x="44" y="75" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 80.5)"/>
+      <rect class="cell" x="0" y="106" width="380" height="48"/>
+      <text class="name" x="58" y="136">email</text><text class="type" x="290" y="136">varchar</text>
+      <rect x="44" y="123" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 128.5)"/>
+      <rect class="cell" x="0" y="154" width="380" height="48"/>
+      <text class="name" x="58" y="184">hashed_password</text><text class="type" x="290" y="184">varchar</text>
+      <rect x="44" y="171" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 176.5)"/>
+      <rect class="cell" x="0" y="202" width="380" height="48"/>
+      <text class="name" x="58" y="232">full_name</text><text class="type" x="290" y="232">varchar</text>
+      <rect x="44" y="219" width="11" height="11" rx="2" fill="none" stroke="#cfcfcf" stroke-width="1.5" transform="rotate(45 49.5 224.5)"/>
+      <rect class="cell" x="0" y="250" width="380" height="48"/>
+      <text class="name" x="58" y="280">role</text><text class="type" x="290" y="280">varchar</text>
+      <rect x="44" y="267" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 272.5)"/>
+      <rect class="cell" x="0" y="298" width="380" height="48"/>
+      <text class="name" x="58" y="328">is_active</text><text class="type" x="328" y="328">bool</text>
+      <rect x="44" y="315" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 320.5)"/>
+      <rect class="cell" x="0" y="346" width="380" height="48"/>
+      <text class="name" x="58" y="376">created_at</text><text class="type" x="274" y="376">timestamp</text>
+      <rect x="44" y="363" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 368.5)"/>
+      <rect class="cell" x="0" y="394" width="380" height="48"/>
+      <text class="name" x="58" y="424">updated_at</text><text class="type" x="274" y="424">timestamp</text>
+      <rect x="44" y="411" width="11" height="11" rx="2" fill="#cfcfcf" transform="rotate(45 49.5 416.5)"/>
+    </g>
+  </g>
+
+  <path class="relation" d="M690 654 L742 654 L742 490 L810 490"/>
+
+  <g transform="translate(430 827)">
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#f5f5f5" stroke-width="1.5"/>
+    <text class="legendText" x="14" y="5">Primary key</text>
+    <text class="legendText" x="154" y="5"># Identity</text>
+    <text class="legendText" x="282" y="5">Unique</text>
+    <rect x="405" y="-6" width="11" height="11" rx="2" fill="none" stroke="#f5f5f5" stroke-width="1.5" transform="rotate(45 410.5 -0.5)"/>
+    <text class="legendText" x="425" y="5">Nullable</text>
+    <rect x="538" y="-6" width="11" height="11" rx="2" fill="#d2d2d2" transform="rotate(45 543.5 -0.5)"/>
+    <text class="legendText" x="558" y="5">Non-Nullable</text>
+  </g>
+</svg>

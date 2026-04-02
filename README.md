@@ -19,6 +19,12 @@ This project is a production-oriented FastAPI backend for a Finance Dashboard sy
 | Password hashing | `passlib[bcrypt]` |
 | Dependency management | Poetry |
 
+## Database Schema Visualization
+
+The current database structure is shown below for quick reference while working with users, records, and migrations.
+
+![Database schema visualization](docs/database-schema-visualization.svg)
+
 ## 3. Setup Instructions
 
 1. Clone the repository and move into the backend directory.

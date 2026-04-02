@@ -20,7 +20,18 @@ async def register_user(user_in: UserCreate, db: Session = Depends(get_db)) -> U
     return user_service.register_user(db=db, user_in=user_in)
 
 
-@router.post("/login", response_model=Token, status_code=status.HTTP_200_OK)
+@router.post(
+    "/login",
+    response_model=Token,
+    status_code=status.HTTP_200_OK,
+    summary="Login with email and password",
+    description=(
+        "Authenticate with your email address and password. "
+        "In Swagger UI, the OAuth2 password flow may still submit the standard `username` field under the hood, "
+        "but it should be treated as your email address. "
+        "Test admin credentials: `admin@finance.com` / `Admin1234`."
+    ),
+)
 async def login(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db),
