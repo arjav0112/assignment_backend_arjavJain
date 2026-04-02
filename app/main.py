@@ -6,6 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from app.core.config import settings
 from app.database import create_all
 from app.routers import auth, dashboard, records, users
 
@@ -33,7 +34,8 @@ app.include_router(dashboard.router)
 
 @app.on_event("startup")
 def startup_event() -> None:
-    create_all()
+    if settings.run_db_init_on_startup:
+        create_all()
 
 
 @app.exception_handler(Exception)

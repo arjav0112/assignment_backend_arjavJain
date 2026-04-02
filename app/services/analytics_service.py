@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import date, timedelta
 
-from sqlalchemy import case, func, select
+from sqlalchemy import case, extract, func, select
 from sqlalchemy.orm import Session
 
 from app.models.record import FinancialRecord, RecordType
@@ -109,17 +109,20 @@ def get_trends(db: Session, period: TrendPeriod) -> TrendsResponse:
         start_period = _shift_months(current_month, 11)
         buckets = [_shift_months(current_month, offset) for offset in range(11, -1, -1)]
         labels = [bucket.strftime("%Y-%m") for bucket in buckets]
-        group_expr = func.strftime("%Y-%m", FinancialRecord.date)
+        group_year = extract("year", FinancialRecord.date)
+        group_part = extract("month", FinancialRecord.date)
     else:
         current_week = today - timedelta(days=today.weekday())
         start_period = current_week - timedelta(weeks=11)
         buckets = [start_period + timedelta(weeks=offset) for offset in range(12)]
-        labels = [bucket.strftime("%Y-W%W") for bucket in buckets]
-        group_expr = func.strftime("%Y-W%W", FinancialRecord.date)
+        labels = [f"{bucket.isocalendar().year}-W{bucket.isocalendar().week:02d}" for bucket in buckets]
+        group_year = extract("isoyear", FinancialRecord.date)
+        group_part = extract("week", FinancialRecord.date)
 
     stmt = (
         select(
-            group_expr.label("period"),
+            group_year.label("group_year"),
+            group_part.label("group_part"),
             func.coalesce(
                 func.sum(case((FinancialRecord.type == RecordType.income, FinancialRecord.amount), else_=0.0)),
                 0.0,
@@ -130,17 +133,20 @@ def get_trends(db: Session, period: TrendPeriod) -> TrendsResponse:
             ).label("expenses"),
         )
         .where(*_dashboard_conditions(start_date=start_period))
-        .group_by(group_expr)
-        .order_by(group_expr.asc())
+        .group_by(group_year, group_part)
+        .order_by(group_year.asc(), group_part.asc())
     )
 
     label_map = {label: TrendItem(period=label, income=0.0, expenses=0.0, net=0.0) for label in labels}
     for row in db.execute(stmt).all():
-        if row.period in label_map:
+        year = int(row.group_year)
+        part = int(row.group_part)
+        label = f"{year}-{part:02d}" if period == TrendPeriod.monthly else f"{year}-W{part:02d}"
+        if label in label_map:
             income = float(row.income or 0.0)
             expenses = float(row.expenses or 0.0)
-            label_map[row.period] = TrendItem(
-                period=row.period,
+            label_map[label] = TrendItem(
+                period=label,
                 income=income,
                 expenses=expenses,
                 net=income - expenses,
